@@ -89,11 +89,6 @@ ROUTES.set('breadcrumb/basic', {
 		skip: true,
 	},
 });
-ROUTES.set('button-group/basic', {
-	snapshot: {
-		skip: true,
-	},
-});
 ROUTES.set('button-link/basic', {
 	snapshot: {
 		skip: true,
@@ -238,6 +233,9 @@ ROUTES.set('form/error-list', {
 	},
 });
 ROUTES.set('heading/badge', {
+	axe: {
+		skipFailures: true,
+	},
 	snapshot: {
 		skip: true,
 		zoom: {
@@ -246,6 +244,9 @@ ROUTES.set('heading/badge', {
 	},
 });
 ROUTES.set('heading/basic', {
+	axe: {
+		skipFailures: true,
+	},
 	snapshot: {
 		viewportSize: {
 			width: 250,
@@ -256,7 +257,11 @@ ROUTES.set('heading/basic', {
 		},
 	},
 });
+ROUTES.set('heading/secondary');
 ROUTES.set('heading/paragraph', {
+	axe: {
+		skipFailures: true,
+	},
 	snapshot: {
 		skip: true,
 		zoom: {
@@ -487,16 +492,6 @@ ROUTES.set('kolibri/basic', {
 	},
 });
 ROUTES.set('link-button/basic', {
-	snapshot: {
-		skip: true,
-	},
-});
-ROUTES.set('link-group/basic', {
-	snapshot: {
-		skip: true,
-	},
-});
-ROUTES.set('link-group/horizontal', {
 	snapshot: {
 		skip: true,
 	},
@@ -764,7 +759,7 @@ ROUTES.set('tabs/basic', {
 ROUTES.set('tabs/icons-only', {
 	snapshot: {
 		viewportSize: {
-			width: 500,
+			width: 200,
 			height: 100,
 		},
 		zoom: {

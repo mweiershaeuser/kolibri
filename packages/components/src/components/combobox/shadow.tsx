@@ -207,6 +207,7 @@ export class KolCombobox implements ComboboxAPI {
 									aria-labelledby={this.state._id}
 									aria-activedescendant={this._isOpen && this._focusedOptionIndex >= 0 ? `option-${this._focusedOptionIndex}` : undefined}
 									autoCapitalize="off"
+									autoComplete="off" /* disable browser's not accessible autocomplete popup */
 									autoCorrect="off"
 									disabled={this.state._disabled}
 									id={this.state._id}
@@ -376,7 +377,7 @@ export class KolCombobox implements ComboboxAPI {
 
 	@Listen('click', { target: 'window' })
 	handleWindowClick(event: MouseEvent) {
-		if (this.host != undefined && !this.host.contains(event.target as Node)) {
+		if (this.host !== undefined && !this.host.contains(event.target as Node)) {
 			this._isOpen = false;
 		}
 	}
